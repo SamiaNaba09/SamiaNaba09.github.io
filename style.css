@@ -732,88 +732,396 @@ h1 span {
     cursor: pointer;
 }
 
-
 /* =========================
-   FOOTER
+   CONTACT FORM - CENTER
 ========================= */
 
-.footer {
+.contact-form-box {
+    width: 100%;
+    max-width: 700px;
 
-    padding: 75px 0 25px;
+    margin: 0 auto;
 
-    background: #050505;
+    background: #f3eadf;
+
+    padding: 32px 40px;
+
+    border-radius: 12px;
 }
 
-.footer-grid {
+.contact-form-title {
+    text-align: center;
 
-    display: grid;
-
-    grid-template-columns:
-        1.5fr 1fr 1fr 1.3fr;
-
-    gap: 40px;
+    margin-bottom: 25px;
 }
 
-.footer h3 {
+.contact-form-title h3 {
+    font-size: 28px;
 
-    font-size: 15px;
+    color: #111;
 
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
-.footer p,
-.footer a {
+.contact-form-title p {
+    font-size: 14px;
 
-    font-size: 10px;
+    color: #777;
 
-    color: #8c8c8c;
-
-    display: block;
-
-    margin: 7px 0;
+    line-height: 1.6;
 }
 
-.socials {
+.contact-form {
+    width: 100%;
+
+    background: transparent;
+
+    padding: 0;
 
     display: flex;
 
-    gap: 10px;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 11px 13px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.contact-form .btn {
+    align-self: center;
+
+    border: 0;
+
+    cursor: pointer;
+
+    padding: 13px 28px;
+}
+
+
+/* =========================
+   PROFESSIONAL FOOTER
+========================= */
+
+.footer {
+    background: #050505;
+
+    padding: 75px 0 0;
+
+    border-top: 1px solid #1b1b1b;
+}
+
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr 1.2fr;
+
+    gap: 70px;
+
+    padding-bottom: 60px;
+}
+
+
+/* =========================
+   FOOTER HEADING
+========================= */
+
+.footer-column h3 {
+    position: relative;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 10px;
+}
+
+
+/* Gold underline */
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 40px;
+    height: 2px;
+
+    background: var(--gold);
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   GET IN TOUCH
+========================= */
+
+.footer-about p {
+    max-width: 350px;
+
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.footer-socials {
+    display: flex;
+
+    gap: 12px;
 
     margin-top: 20px;
 }
 
-.socials a {
+.footer-socials a {
+    width: 42px;
+    height: 42px;
 
-    width: 34px;
+    display: flex;
 
-    height: 34px;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #333;
 
     border-radius: 50%;
 
-    background: #181818;
+    color: #aaa;
 
-    display: grid;
+    font-size: 17px;
 
-    place-items: center;
+    transition: all 0.3s ease;
+}
 
-    color: #fff;
+.footer-socials a:hover {
+    background: var(--gold);
 
+    border-color: var(--gold);
+
+    color: #000;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 10px rgba(255, 189, 57, 0.5);
+}
+
+
+/* =========================
+   WHAT I DO
+========================= */
+
+.footer-do {
+    list-style: none;
+
+    padding: 0;
     margin: 0;
 }
 
-.copyright {
+.footer-do li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+
+    color: #888;
+
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+.footer-do li i {
+    color: var(--gold);
+
+    width: 18px;
+
+    font-size: 14px;
+}
+
+.footer-do li:hover {
+    color: var(--gold);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.footer-contact {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.footer-contact li i {
+    color: var(--gold);
+
+    font-size: 15px;
+
+    width: 18px;
+
+    margin-top: 4px;
+}
+
+.footer-contact a {
+    color: #888;
+
+    transition: 0.25s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    border-top: 1px solid #181818;
+
+    padding: 22px 0;
+}
+
+
+/* Center Copyright */
+
+.footer-bottom p {
+    margin: 0;
 
     text-align: center;
 
-    color: #777;
+    color: #666;
 
-    font-size: 9px;
+    font-size: 11px;
 
-    border-top: 1px solid #151515;
+    line-height: 1.6;
+}
 
-    padding-top: 25px;
+.footer-bottom p span {
+    color: #aaa;
+}
 
-    margin-top: 45px;
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-contact-column {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 520px) {
+
+    .footer {
+        padding-top: 55px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 45px;
+    }
+
+    .footer-contact-column {
+        grid-column: auto;
+    }
+
+    .footer-about p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+
 }
 
 
@@ -1044,6 +1352,20 @@ h1 span {
 ========================= */
 
 @media (max-width: 520px) {
+
+.contact-form-box {
+        padding: 30px 20px;
+    }
+
+    .contact-form-title h3 {
+        font-size: 24px;
+    }
+
+    .contact-form-title p {
+        font-size: 13px;
+    }
+
+
     height: 250px;
 
     .hero-image img {
