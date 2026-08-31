@@ -344,9 +344,7 @@ function typeWriter() {
 
 }
 
-
-
-
-
-
 typeWriter();
+window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+});
